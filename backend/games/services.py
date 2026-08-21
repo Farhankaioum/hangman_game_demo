@@ -1,4 +1,5 @@
 import random
+import math
 
 from .models import Game
 
@@ -10,7 +11,7 @@ def create_game():
 
 
 def maximum_incorrect_guesses(game: Game) -> int:
-    return max(len(game.word) - 1, 0)
+    return math.ceil(len(game.word) / 2)
 
 
 def calculate_status(game: Game) -> str:
